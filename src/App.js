@@ -138,12 +138,12 @@ function load (visble){
 function App() {
   const [visible, setVisible] = useState(false);
   return (
-    <div className="flex flex-col">
+    <div style={{height: `100vh`}} className="flex flex-col">
       <header className='flex-none'>
           <div style={{height: 80}} className='text-gray-600 bold px-4 bg-green-100'>This is a Header</div>
       </header>
       <div className='flex-grow flex'>
-          <div style={{width: 70}} className='p-4 bg-gray-100 flex flex-col items-center justify-between'>
+          <div style={{width: 70}} className='p-4 bg-gray-100 flex flex-col items-center justify-between flex-none'>
             <div className='flex flex-col'>
               <span>☀</span>
               <span>☁</span>
@@ -157,13 +157,13 @@ function App() {
             </div>
             
           </div>  
-          <div className='flex bg-pink-100'>
-            <div style={{width: 270}}  className='p-4 bg-blue-100'>
+          <div className='flex-grow flex bg-pink-100'>
+            <div style={{width: 270}}  className='p-4 flex-none bg-blue-100'>
               <h1>Your Profile</h1>
               <img alt="User" className="p-4 rounded-full" src="https://media2.giphy.com/media/3o84U7IeOoPUfi0SCQ/giphy.gif" style={{width: 200}}></img>
             </div>  
 
-            <div className='bg-green-600 p-2'>
+            <div className='flex-grow bg-green-600 p-2'>
               <div className='p-2 text-white bg-gray-600'>List of few Countries
                 <button onClick={()=>{
                   setVisible(true)
