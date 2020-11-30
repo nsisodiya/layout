@@ -8,7 +8,7 @@ function load (visble){
       return '';
     }else{
 
-      return <div className='p-4 flex flex-col'>
+      return <div className='p-4 bg-blue-400 flex flex-col'>
       <span className='p-1 mt-4 rounded bg-red-200'>Afghanistan</span>
       <span className='p-1 mt-4 rounded bg-red-200'>Albania</span>
       <span className='p-1 mt-4 rounded bg-red-200'>Algeria</span>
@@ -140,10 +140,10 @@ function App() {
   return (
     <div style={{height: `100vh`}} className="flex flex-col">
       <header className='flex-none'>
-          <div style={{height: 80}} className='text-gray-600 bold px-4 bg-green-100'>This is a Header</div>
+          <div style={{height: 80}} className='text-gray-900 bold px-4 bg-green-100'>This is a Header</div>
       </header>
-      <div className='flex-grow flex'>
-          <div style={{width: 70}} className='p-4 bg-gray-100 flex flex-col items-center justify-between flex-none'>
+      <div style={{height: 0}} className='flex-grow flex'>
+          <div style={{width: 70}} className='p-4 bg-pink-300 flex flex-col items-center justify-between flex-none'>
             <div className='flex flex-col'>
               <span>☀</span>
               <span>☁</span>
@@ -157,25 +157,23 @@ function App() {
             </div>
             
           </div>  
-          <div className='flex-grow flex bg-pink-100'>
+          <div className='flex-grow flex'>
             <div style={{width: 270}}  className='p-4 flex-none bg-blue-100'>
               <h1>Your Profile</h1>
               <img alt="User" className="p-4 rounded-full" src="https://media2.giphy.com/media/3o84U7IeOoPUfi0SCQ/giphy.gif" style={{width: 200}}></img>
             </div>  
 
-            <div className='flex-grow bg-green-600 p-2'>
+            <div className='flex-grow flex flex-col bg-green-600 p-2'>
               <div className='p-2 text-white bg-gray-600'>List of few Countries
                 <button onClick={()=>{
                   setVisible(true)
                 }} className='ml-4 p-2 bg-blue-600 text-white'>Load</button>
               </div>
-              {
-                `${visible}`
-              }
-              {
-                load(visible)
-              }
-              
+              <div className='bg-blue-400 flex-grow overflow-auto'>
+                {
+                  load(visible)
+                }
+              </div>
             </div>  
 
 
