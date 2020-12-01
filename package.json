@@ -21,7 +21,7 @@
     "build:tailwindcss": "tailwindcss build ./src/css/tailwind.src.css -c ./tailwind.config.js -o ./src/css/tailwind.css",
     "start:cra": "react-scripts start",
     "start:watchtailwindcss": "onchange './src/**/*.js' -- npm run build:tailwindcss",
-    "predeploy": "react-scripts build",
+    "predeploy": "PUBLIC_URL=/layout react-scripts build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
