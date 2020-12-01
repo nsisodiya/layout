@@ -5,7 +5,7 @@ import {useState} from 'react';
 
 function load (visble){
     if(visble === false){
-      return '';
+      return <p className='p-4'>Right now this section is small so there is not scrollbar. once we click on button, it will load a big dynamic content. Scrollbar will appear but it will not disturb other section.</p>;
     }else{
 
       return <div className='p-4 bg-blue-400 flex flex-col'>
@@ -140,15 +140,15 @@ function App() {
   return (
     <div style={{height: `100vh`}} className="flex flex-col">
       <header className='flex-none'>
-          <div style={{height: 80}} className='text-gray-900 bold px-4 bg-green-100'>This is a Header</div>
+          <div style={{height: 80}} className='text-gray-50 text-xl text-center bold p-4 bg-indigo-900'>This is a Header</div>
       </header>
       <div style={{height: 0}} className='flex-grow flex'>
-          <div style={{width: 70}} className='p-4 bg-pink-300 flex flex-col items-center justify-between flex-none'>
+          <div style={{width: 70}} className='p-4 bg-yellow-900 flex flex-col items-center justify-between flex-none'>
             <div className='flex flex-col'>
               <span>☀</span>
               <span>☁</span>
               <span>☂</span>
-              <span>☃</span>
+              <span>☯</span>
             </div>
             
             <div className='flex flex-col'>
@@ -158,16 +158,16 @@ function App() {
             
           </div>  
           <div className='flex-grow flex'>
-            <div style={{width: 270}}  className='p-4 flex-none bg-blue-100'>
+            <div style={{width: 270}}  className='p-4 flex-none bg-yellow-200'>
               <h1>Your Profile</h1>
               <img alt="User" className="p-4 rounded-full" src="https://media2.giphy.com/media/3o84U7IeOoPUfi0SCQ/giphy.gif" style={{width: 200}}></img>
             </div>  
 
-            <div className='flex-grow flex flex-col bg-green-600 p-2'>
+            <div className='flex-grow flex flex-col bg-red-400 p-4'>
               <div className='p-2 text-white bg-gray-600'>List of few Countries
                 <button onClick={()=>{
                   setVisible(true)
-                }} className='ml-4 p-2 bg-blue-600 text-white'>Load</button>
+                }} className='ml-4 border p-2 bg-blue-600 rounded focus:outline-none hover:text-white hover:bg-blue-900 text-gray-200'>Click here to Load</button>
               </div>
               <div className='bg-blue-400 flex-grow overflow-auto'>
                 {
